@@ -98,7 +98,7 @@ O Postman é uma ferramenta poderosa que facilita o teste e a interação com AP
    {
      "name": "Mario Silva",
      "email": "Mario@gmail.com",
-     "phone": "977557755"
+     "phone": "(18) 93561-1354"
    }
 - **Exemplo de resposta**:
   ```json
