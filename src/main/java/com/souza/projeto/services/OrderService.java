@@ -13,14 +13,14 @@ import com.souza.projeto.repositories.OrderRepository;
 public class OrderService {
 	
 	@Autowired
-	private OrderRepository userRepository;
+	private OrderRepository OrderRepository;
 	
 	public List<Order> findAll(){
-		return userRepository.findAll();		
+		return OrderRepository.findAll();
 	}
 	
 	public Order findById(Long id) {
-		Optional<Order> obj = userRepository.findById(id);
+		Optional<Order> obj = OrderRepository.findById(id);
 		return obj.get();
 	}
 }

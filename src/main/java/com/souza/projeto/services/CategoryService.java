@@ -13,14 +13,14 @@ import com.souza.projeto.repositories.CategoryRepository;
 public class CategoryService {
 
 	@Autowired
-	private CategoryRepository userRepository;
+	private CategoryRepository CategoryRepository;
 
 	public List<Category> findAll(){
-		return userRepository.findAll();
+		return CategoryRepository.findAll();
 	}
 
 	public Category findById(Long id) {
-		Optional<Category> obj = userRepository.findById(id);
+		Optional<Category> obj = CategoryRepository.findById(id);
 		return obj.get();
 	}
 }

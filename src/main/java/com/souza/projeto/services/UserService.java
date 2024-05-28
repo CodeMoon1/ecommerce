@@ -18,7 +18,7 @@ import jakarta.persistence.EntityNotFoundException;
 @Service
 public class UserService {
 
-	@Autowired
+    @Autowired
 	private UserRepository userRepository;
 
 	public List<User> findAll() {
@@ -31,7 +31,11 @@ public class UserService {
 	}
 
 	public User insert(User user) {
-		return userRepository.save(user);
+		try {
+			return userRepository.save(user);
+		}catch (DataIntegrityViolationException e){
+			throw new DatabaseException("Email already exists: " + user.getEmail());
+		}
 	}
 
 	public void delete(Long id) {
@@ -40,7 +44,7 @@ public class UserService {
 		} catch (EmptyResultDataAccessException e) {
 			throw new ResourceNotFoundException(id);
 		} catch (DataIntegrityViolationException ex) {
-			throw new DatabaseException(ex.getMessage());
+			throw new DatabaseException(ex.getMessage() + id);
 		}
 	}
 
@@ -52,14 +56,12 @@ public class UserService {
 		} catch (EntityNotFoundException e) {
 			throw new ResourceNotFoundException(id);
 		}
-
 	}
 
 	private void updateData(User entity, User user) {
 		entity.setName(user.getName());
 		entity.setEmail(user.getEmail());
 		entity.setPhone(user.getPhone());
-
 	}
 
 }

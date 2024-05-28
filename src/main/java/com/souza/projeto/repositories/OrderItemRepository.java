@@ -8,5 +8,4 @@ import com.souza.projeto.entities.OrderItem;
 @Repository
 public interface OrderItemRepository extends JpaRepository<OrderItem,Long>{
 
-	
 }

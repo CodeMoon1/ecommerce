@@ -17,16 +17,16 @@ import com.souza.projeto.services.OrderService;
 @RequestMapping(value = "/orders")
 public class OrderResource {
 	@Autowired
-	private OrderService service;
+	private OrderService orderService;
 	
 	@GetMapping
 	public ResponseEntity<List<Order>> findAll(){
-		List<Order> list = service.findAll();
+		List<Order> list = orderService.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 	@GetMapping(value = "/{id}")
 	public ResponseEntity <Order> findById(@PathVariable Long id) {
-		Order obj = service.findById(id);
+		Order obj = orderService.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
 

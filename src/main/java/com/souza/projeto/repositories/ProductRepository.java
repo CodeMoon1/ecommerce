@@ -8,5 +8,4 @@ import com.souza.projeto.entities.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product,Long>{
 
-	
 }

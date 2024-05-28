@@ -8,5 +8,4 @@ import com.souza.projeto.entities.Category;
 @Repository
 public interface CategoryRepository extends JpaRepository<Category,Long>{
 
-	
 }
