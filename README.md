@@ -17,7 +17,7 @@ API REST desenvolvida utilizando Spring Boot e PostgreSQL para alimentar o back-
 ## Tecnologias Utilizadas :octopus:
 - **Persistência**: JPA Hibernate
 - **Database**: PostgreSQL
-- **Testes**: JUnit, Database H2
+- **Testes**: JUnit,Mockito,Database H2
 - **Container**: Docker
 
 ## :rat::rat:Utilizando o Postman para Acesso ao Backend :rat::rat:
