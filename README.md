@@ -21,7 +21,7 @@ API REST desenvolvida utilizando Spring Boot e PostgreSQL para alimentar o back-
 - **Container**: Docker
 
 ## :rat::rat:Utilizando o Postman para Acesso ao Backend :rat::rat:
-O Postman é uma ferramenta poderosa que facilita o teste e a interação com APIs. Recomendamos o uso do Postman para explorar e testar os endpoints da API de e-commerce.
+O Postman é uma ferramenta poderosa que facilita o teste e a interação com APIs. Recomendo o uso do Postman para explorar e testar os endpoints da API de e-commerce.
 
 ## Exemplo de interação
 
